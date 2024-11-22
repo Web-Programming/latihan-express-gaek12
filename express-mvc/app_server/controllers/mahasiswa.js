@@ -109,3 +109,31 @@ const show = (req, res, next) => {
             res.status(404).json(responseMessage);
         });
 };
+
+
+//untuk menghandle request delete
+const destroy = (req, res, next) => {
+    Mahasiswa
+        .findByIdAndDelete(req.params.id)
+        .then((mhs) => {
+            const responseMessage = {
+                code: 200,
+                success: true,
+                message: "Successfull",
+            };
+            res.status(200).json(responseMessage);
+        });
+        /*.catch((e) => {
+            const responseMessage = {
+                code: 404,
+                success: false,
+                message: "ID " + req.params.id + " Not Found",
+                error: e
+            };
+            res.status(404).json(responseMessage);
+        });*/
+};
+
+module.exports = {
+    index, insert, update, show, destroy
+}
