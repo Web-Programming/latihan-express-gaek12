@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HousingLocationComponent } from './housting-location.component';
+import { HousingLocationComponent } from './housing-location.component';
 
-describe('HoustingLocationComponent', () => {
+describe('HousingLocationComponent', () => {
   let component: HousingLocationComponent;
   let fixture: ComponentFixture<HousingLocationComponent>;
 
